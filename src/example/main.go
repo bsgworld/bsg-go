@@ -22,7 +22,7 @@ func RandStringRunes(n int) string {
 }
 func main() {
 	//HLR
-	var hlrClient = bsgrest.NewHlrClient("https://app.bsg.hk/rest", "test_JhIRDMsbo4prEsXCc3AW")
+	var hlrClient = bsgrest.NewHlrClient("https://api.bsg.world/rest", "test_JhIRDMsbo4prEsXCc3AW")
 	//Balance
 	var balance = hlrClient.GetBalance()
 	log.Println(balance)
@@ -48,7 +48,7 @@ func main() {
 	var hlrInfo2 = hlrClient.GetHlrInfoByReference(hlr2.Hlrs[1].Reference)
 	log.Println(hlrInfo2)
 	//SMS
-	var smsClient = bsgrest.NewSmsClient("https://app.bsg.hk/rest", "test_JhIRDMsbo4prEsXCc3AW")
+	var smsClient = bsgrest.NewSmsClient("https://api.bsg.world/rest", "test_JhIRDMsbo4prEsXCc3AW")
 	//Prices
 	var smsPrices = smsClient.GetSmsPrices()
 	log.Println(smsPrices)
@@ -73,7 +73,7 @@ func main() {
 	var smsInfo2 = smsClient.GetSmsInfoByReference(oneSms.Sms.Reference)
 	log.Println(smsInfo2)
 	//Viber
-	var viberClient = bsgrest.NewViberClient("https://app.bsg.hk/rest", "test_JhIRDMsbo4prEsXCc3AW")
+	var viberClient = bsgrest.NewViberClient("https://api.bsg.world/rest", "test_JhIRDMsbo4prEsXCc3AW")
 	//Prices
 	var viberPrices = viberClient.GetViberPrices()
 	log.Println(viberPrices)

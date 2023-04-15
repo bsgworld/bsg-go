@@ -8,7 +8,7 @@ Go runtime
 
 ## Installation
 
-go get github.com/BSG/go/bsgrest
+go get github.com/bsgworld/bsg-go
 		
 ## Dependencies
 
@@ -22,7 +22,7 @@ go get github.com/BSG/go/bsgrest
 
 ```go
 //HLR
-var hlrClient = bsgrest.NewHlrClient("https://app.bsg.hk/rest", "YOUR_API_KEY")
+var hlrClient = bsgrest.NewHlrClient("https://api.bsg.world/rest", "YOUR_API_KEY")
 //Balance
 var balance = hlrClient.GetBalance()
 log.Println(balance)
@@ -45,7 +45,7 @@ log.Println(hlrInfo)
 var hlrInfo2 = hlrClient.GetHlrInfoByReference(hlr2.Hlrs[1].Reference)
 log.Println(hlrInfo2)
 //SMS
-var smsClient = bsgrest.NewSmsClient("https://app.bsg.hk/rest", "YOUR_API_KEY")
+var smsClient = bsgrest.NewSmsClient("https://api.bsg.world/rest", "YOUR_API_KEY")
 //Prices
 var smsPrices = smsClient.GetSmsPrices()
 log.Println(smsPrices)
@@ -70,7 +70,7 @@ log.Println(smsInfo)
 var smsInfo2 = smsClient.GetSmsInfoByReference(oneSms.Sms.Reference)
 log.Println(smsInfo2)
 //Viber
-var viberClient = bsgrest.NewViberClient("https://app.bsg.hk/rest", "YOUR_API_KEY")
+var viberClient = bsgrest.NewViberClient("https://api.bsg.world/rest", "YOUR_API_KEY")
 //Prices
 var viberPrices = viberClient.GetViberPrices()
 log.Println(viberPrices)
